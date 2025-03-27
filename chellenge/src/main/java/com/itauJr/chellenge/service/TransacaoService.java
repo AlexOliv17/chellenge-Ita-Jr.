@@ -35,4 +35,11 @@ public class TransacaoService {
             return ResponseEntity.status(HttpStatus.CREATED).build();
         }
     }
+
+    public ResponseEntity<?> deleteTransacoes() throws IOException {
+        FileWriter db = new FileWriter("db.txt");
+        db.flush();
+        db.close();
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
 }
