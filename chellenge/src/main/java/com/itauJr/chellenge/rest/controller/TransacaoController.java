@@ -22,4 +22,9 @@ public class TransacaoController {
     public ResponseEntity<?> deletarTransacoes() throws IOException {
         return service.deleteTransacoes();
     }
+
+    @GetMapping
+    public ResponseEntity<?> getAllTransacoesLastOneMinute() throws Exception {
+        return service.getAllTransacoesLastOneMinute();
+    }
 }
